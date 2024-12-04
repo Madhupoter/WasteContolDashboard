@@ -1,0 +1,52 @@
+.dashboardChart {
+  margin-top: 50px;
+  overflow: hidden;
+}
+.dashboardChart  .pageTitle{
+  margin-bottom: 50px;
+ }
+.dashboardChart .dashboardChartContent {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.dashboardChart .dashboardChartContent .dashboardChartContent-text {
+  background-color: #b6d7a8;
+  padding: 15px;
+  border: 2px solid #6c975a;
+  text-align: center;
+}
+
+.dashboardChart .dashboardChartContent .dashboardChartContent-text h6 {
+  color: #6c975a;
+}
+
+.WasteCategoryPieChart {
+  background-color: #e1fcd6;
+  padding: 15px;
+  margin: 10px 0px;
+}
+
+.charts {
+  border: 1px solid #6c975a;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.chartBg {
+  background-color: #dff8d5;
+}
+
+
+@media (max-width: 768px) {
+  .dashboardChart .dashboardChartContent {
+    display: unset;
+    justify-content: unset;
+}
+.dashboardChart .dashboardChartContent .dashboardChartContent-text {
+  margin-bottom: 10px;
+}
+}
