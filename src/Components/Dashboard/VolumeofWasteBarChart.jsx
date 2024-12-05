@@ -2,28 +2,27 @@
 import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS, BarElement, Tooltip, Legend, CategoryScale, LinearScale,} from "chart.js";
 
-// Register Chart.js components
 ChartJS.register(BarElement, Tooltip, Legend, CategoryScale, LinearScale);
 
 const VolumeofWasteBarChart = () => {
-    // Data for the stacked bar chart
+    
     const chartData = {
-        labels: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5"], // Weeks
+        labels: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5"], 
         datasets: [
             {
                 label: "Large",
-                data: [107.97, 165.38, 57.67, 85.39 ], // Replace with actual data
-                backgroundColor: "rgba(0, 100, 0, 0.8)", // Dark green
+                data: [107.97, 165.38, 57.67, 85.39 ], 
+                backgroundColor: "rgba(0, 100, 0, 0.8)", 
             },
             {
                 label: "Medium",
-                data: [218.21, 183.84, 270.25 , 340.89, 170.94], // Replace with actual data
-                backgroundColor: "rgba(34, 139, 34, 0.8)", // Medium green
+                data: [218.21, 183.84, 270.25 , 340.89, 170.94], 
+                backgroundColor: "rgba(34, 139, 34, 0.8)", 
             },
             {
                 label: "Small",
-                data: [24.72,40.84, 43.09, 43.02], // Replace with actual data
-                backgroundColor: "rgba(144, 238, 144, 0.8)", // Light green
+                data: [24.72,40.84, 43.09, 43.02], 
+                backgroundColor: "rgba(144, 238, 144, 0.8)", 
             },
             
             
@@ -39,19 +38,19 @@ const VolumeofWasteBarChart = () => {
                 position: "top",
             },
             datalabels: {
-                display: false, // This hides the data labels
+                display: false, 
               },
         },
         scales: {
             x: {
-                stacked: true, // Enable stacking for the X-axis
+                stacked: true, 
                 title: {
                     display: true,
                     // text: "Weeks",
                 },
             },
             y: {
-                stacked: true, // Enable stacking for the Y-axis
+                stacked: true, 
                 title: {
                     display: true,
                     // text: "Total Volume (kg)",

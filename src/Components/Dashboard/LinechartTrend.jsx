@@ -1,21 +1,19 @@
-
 import { Line } from "react-chartjs-2";
 import { Chart as ChartJS, LineElement, Tooltip, Legend, CategoryScale, LinearScale, PointElement } from "chart.js";
 
-// Register necessary Chart.js components
 ChartJS.register(LineElement, PointElement, Tooltip, Legend, CategoryScale, LinearScale);
 
 const LinechartTrend = () => {
     // Weekly Job Completion Trend data
     const lineData = {
-        labels: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5"], // Weeks
+        labels: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5"], 
         datasets: [
             {
                 label: "Jobs Completed",
-                data: [20, 22, 18, 25, 30], // Replace with actual data
+                data: [20, 22, 18, 25, 30], 
                 borderColor: "rgba(75, 192, 192, 1)",
                 backgroundColor: "rgba(75, 192, 192, 0.2)",
-                tension: 0.3, // Smooth line
+                tension: 0.3, 
                 pointStyle: "circle",
                 pointRadius: 5,
                 pointHoverRadius: 7,
@@ -23,7 +21,7 @@ const LinechartTrend = () => {
         ],
     };
 
-    // Line chart options
+   
     const lineOptions = {
         responsive: true,
         plugins: {
@@ -32,7 +30,7 @@ const LinechartTrend = () => {
                 position: "top",
             },
             datalabels: {
-                display: false, // This hides the data labels
+                display: false, 
             },
         },
         scales: {

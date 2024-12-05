@@ -3,11 +3,10 @@ import { Pie } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels"; // Import the plugin
 
-// Register necessary Chart.js components and the plugin
 ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
 const PieChartToxicSubstances = () => {
-    // Data for the pie chart
+    
     const pieData = {
         labels: [
             "Battery Disposal",
@@ -17,10 +16,10 @@ const PieChartToxicSubstances = () => {
             "Mobile Phone Recycling",
             "Printer Recycling",
             "TV Recycling",
-        ], // Service types
+        ], 
         datasets: [
             {
-                data: [31.31, 37.05, 35.67, 42.58, 41.48, 39.25, 28.13], // Toxic Substances Disposed (kg)
+                data: [31.31, 37.05, 35.67, 42.58, 41.48, 39.25, 28.13], 
                 backgroundColor: [
                     "#FF6384",
                     "#36A2EB",
@@ -43,7 +42,7 @@ const PieChartToxicSubstances = () => {
         ],
     };
 
-    // Pie chart options with data labels configuration
+    
     const pieOptions = {
         responsive: true,
         plugins: {
@@ -62,18 +61,18 @@ const PieChartToxicSubstances = () => {
                 },
             },
             datalabels: {
-                color: "#fff", // White color for text labels
+                color: "#fff", 
                 font: {
-                    weight: "bold", // Bold text
-                    size: 12, // Font size
+                    weight: "bold", 
+                    size: 12,
                 },
                 formatter: (value, context) => {
                     const total = context.dataset.data.reduce((sum, val) => sum + val, 0);
                     const percentage = ((value / total) * 100).toFixed(2);
-                    return `${percentage}%`; // Display value and percentage
+                    return `${percentage}%`; 
                 },
-                anchor: "center", // Position the label at the center of each segment
-                align: "center", // Align text to the center of the segment
+                anchor: "center", 
+                align: "center",
             },
         },
     };

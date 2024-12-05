@@ -6,7 +6,7 @@ const Navbar = () => {
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container">
-                    <a className="navbar-brand" href="/">
+                    <a className="navbar-brand" href="#">
                     <img src={logo} alt="Logo" className='logo' />
                     </a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
@@ -17,7 +17,7 @@ const Navbar = () => {
                         <ul className="navbar-nav">
                             
                             <li className="nav-item">
-                                <a className="nav-link" href="./Dashboard">
+                                <a className="nav-link active" href="./Dashboard">
                                     Dashboard
                                 </a>
                             </li>

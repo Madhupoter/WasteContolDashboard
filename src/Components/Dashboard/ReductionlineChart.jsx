@@ -1,25 +1,23 @@
-
 import { Line } from "react-chartjs-2";
 import { Chart as ChartJS, BarElement, Tooltip, Legend, CategoryScale, LinearScale } from "chart.js";
 
-// Register necessary Chart.js components
 ChartJS.register(BarElement, Tooltip, Legend, CategoryScale, LinearScale);
 
 const ReductionlineChart = () => {
-    // Data for the bar chart
+    
     const lineData = {
-        labels: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5"], // Weeks
+        labels: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5"], 
         datasets: [
             {
                 label: "Greenhouse Gas Emissions Reduced (kg CO₂e)",
-                data: [1103.78,809.25, 961.83, 1225.98, 460.4], // Replace with actual GHG data
+                data: [1103.78,809.25, 961.83, 1225.98, 460.4], 
                 backgroundColor: "rgba(75, 192, 192, 0.6)",
                 borderColor: "rgba(75, 192, 192, 1)",
                 borderWidth: 1,
             },
             {
                 label: "Carbon Emissions Reduced (kg)",
-                data: [807.16, 789.8, 687.13, 996.27, 327.5], // Replace with actual Carbon Emissions data
+                data: [807.16, 789.8, 687.13, 996.27, 327.5], 
                 backgroundColor: "rgba(255, 99, 132, 0.6)",
                 borderColor: "rgba(255, 99, 132, 1)",
                 borderWidth: 1,
@@ -36,7 +34,7 @@ const ReductionlineChart = () => {
                 position: "top",
             },
             datalabels: {
-                display: false, // This hides the data labels
+                display: false, 
               },
         },
         scales: {
@@ -53,7 +51,7 @@ const ReductionlineChart = () => {
                 },
                 beginAtZero: true,
                 ticks: {
-                    stepSize: 250, // Interval of 250
+                    stepSize: 250, 
                   },
             },
         },
